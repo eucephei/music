@@ -1,0 +1,30 @@
+<div id="artist">
+    <%#= image_tag @artist.photo.url, :class => "artist_image" %>
+    
+    <%= image_tag @artist.photo.url(:medium), :class => "artist_image" %>
+	<div class="info">
+		<div class="breadcrumbs">
+			<%= @artist.genre %> &gt;
+			<%= link_to @artist.name, @artist %>
+		</div>
+		<div class="name">
+			<%= @artist.name %>
+		</div>
+	</div>
+</div>
+<div id="artist_albums">
+	<div id="pagination">
+    	<h2><%= page_title %></h2> 
+    	<%= will_paginate @small_albums %> 
+		<div class="album_sort">
+			<% form_tag '', :method => 'GET', :class => 'sort' do %>
+				Sort by:
+		  		<%= select_tag :sort, 
+					options_for_select([["name",'name'],["release_date",'release_date']], params[:sort]),
+					:onchange => 'this.form.submit()' %>
+				<% end %>
+		</div> 
+	</div>
+    <br>
+    <%= render(:partial => "albums/small_albums" , :object => @small_albums) %>
+</div>

@@ -1,0 +1,32 @@
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Your Music</title>
+  <%= stylesheet_link_tag "application" %>
+  <%= stylesheet_link_tag 'scaffold', 'depot' %>
+</head>
+<body>
+
+  <p style="color: green"><%= flash[:notice] %>
+  <div id="columns">
+    <br />
+  	<% if session[:user_id] %>
+  		Logged in as:  <%= @current_user %> |
+  		<em><%= link_to 'logout', :controller => 'admin', :action => 'logout' %></em> |
+		<%= link_to 'albums', :controller => 'albums' %> |
+		<%= link_to 'artists', :controller => 'artists' %> | 
+		<%= link_to 'users', :controller => 'users' %> 
+	<% else %>
+		<%= link_to 'login', :controller => 'admin', :action => 'login' %> |
+		<%= link_to 'sign in', new_user_path %> 
+	<% end %>
+  </div>
+  <br />
+  
+  
+  </p>
+  <div class="content">
+    <%= yield %>
+  </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+html, body {
+  margin: 0;
+  font-family: Arial, "MS Trebuchet", sans-serif;
+}
+
+.content {
+  margin: 0 auto;
+  width: 800px;
+}
+.clear {
+	clear:both;
+}
+.album .breadcrumbs {
+  margin: 20px 0;
+}
+
+.album .album_image {
+  float: left;
+  width: 150px;
+}
+
+.album .about {
+  margin-left: 170px;
+}
+
+.album .about h1 {
+  font-size: 22px;
+  margin-top: 0;
+}
+
+.album .tracks {
+  border-collapse: collapse;
+  font-size: 14px;
+  width: 100%;
+}
+
+.album .tracks th {
+  background-color: #E0E7EE;
+  border: solid 1px silver;
+  padding: 5px 10px;
+}
+
+.album .tracks td {
+  border: solid 1px silver;
+  padding: 5px 10px;
+}
+
+.album .tracks .number {
+  width: 2em;
+  text-align: right;
+}
+
+#artist img {
+	height: 450px;
+	float: right;
+}
+#artist .info {
+	height: 450px;
+	background-color: #ababab;
+}
+#artist .name{
+	font-size: 22px;
+	
+}
+#artist_albums {
+	margin: 0px;
+	background: #123;
+	border-top: 1px solid #fff;
+	color: #ddd;
+	padding: 10px;
+	font-size: 12px;
+}
+
+#artist_albums a {
+	color: lightgrey
+}
+
+#artist_albums h2 {
+	margin: 0px;
+	color: #6F6E82;
+	font-size: 16px;
+	padding-left: 10px;
+}	
+
+#artist_albums .pagination {
+	margin: 0px;
+	color: #fff;
+	display: inline;
+	padding-left: 20px;
+}
+
+#artist_albums .album_sort {
+	margin: 0px;
+	font-size: 12px;
+	display: inline;
+	float: right;
+}
+
+.small_albums .small_album {	
+	padding: 10px;
+	color: #fff;
+	float: left;
+	width: 30%;
+	font-size: 12px;
+}
+
+.albums .small_albums .small_album {	
+	color: black;
+}
+
+.small_albums .small_album  img {
+	width: 75px;	
+	float:left;
+	padding-right: 5px;
+}

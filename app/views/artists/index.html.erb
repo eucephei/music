@@ -1,0 +1,11 @@
+<div class="artists">
+	<% @artists.each do |artist| %>
+		<div class="small_artist">
+			<%= image_tag artist.photo.url(:thumb) %>
+			<%= link_to artist.name, artist %>
+		</div>
+	<% end %>
+	<div class="clear">
+	</div>	
+	<%= link_to "new artist", new_artist_path %>
+</div>

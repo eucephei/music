@@ -1,0 +1,11 @@
+<div class="small_albums">
+	<% small_albums.each do |album| %>
+		<div class="small_album">
+			<%= image_tag album.photo.url %>
+			<%= link_to album.name, album %>
+			<%= album.release_date %>
+		</div>
+	<% end %>
+	<div class="clear">
+	</div>
+</div>

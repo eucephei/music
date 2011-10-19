@@ -1,0 +1,8 @@
+<div class="albums">
+	<%# @albums.each do |album| %>
+		<!--	<p><%#= link_to album.name, album %></p>  -->
+	<%# end %>
+
+	<%= render(:partial => "small_albums" , :object => @albums) %>
+	<%= link_to "new album", new_album_path %>
+</div>
